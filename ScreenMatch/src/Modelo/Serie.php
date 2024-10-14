@@ -1,5 +1,8 @@
 <?php 
 
+namespace ScreenMatch\Modelo;
+
+
 class Serie extends Titulo{
 
     // Contrutor
@@ -15,6 +18,11 @@ class Serie extends Titulo{
     {
         parent::__construct($nome, $anoLancamento, $genero);
     }
-
+    // #[Override]
+    public function duracaoMinutos(): int
+    {
+        return $this->temporadas * $this->QTDTemporadas * $this->minutosPorEp;
+    }
+    
 
 }
