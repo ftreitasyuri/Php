@@ -1,3 +1,4 @@
+
 * {
     font-family: 'Montserrat', sans-serif;
     padding: 0;
@@ -128,6 +129,80 @@ main{
 }
 /* FIMHOME */
 
+/* POST */
+#post-container{
+    /* border: 1px solid red; */
+    display: grid;
+    grid-template-columns: 75% 25%;
+    grid-template-rows: auto;
+    grid-template-areas: "main sidebar";
+    grid-gap: 10px;
+    padding: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 250px;
+}
+
+#main-title{
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.content-container{
+    grid-area: main;
+}
+
+#post-description{
+    font-style: Italic;
+    margin-bottom: 40px;
+}
+
+.post-content{
+    line-height: 1.8;
+    margin: 0 auto;
+}
+
+.img-container{
+    margin-bottom: 30px;
+    
+}
+.img-container img{
+    width: 60%;
+
+}
+/* FIMPOST */
+
+/* POST ASIDE */
+#nav-container{
+    grid-area: sidebar;
+
+}
+
+#tags-title, #categories-title{
+    font-size: 24px;
+    margin-bottom: 10px;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    font-weight: 300;
+}
+
+#tag-list, #categories-list{
+    list-style: none;
+}
+#tag-list li, #categories-list li {
+    list-style: none;
+}
+#tag-list a, #categories-list a {
+    color: #666;
+    transition: .5s;
+}
+#tag-list a:hover, #categories-list a:hover {
+    color: #000;
+}
+
+/* FIM POST ASIDE */
 
 /* FOOTER */
 footer{
@@ -140,3 +215,52 @@ footer{
     padding: 50px 0;
 }
 /* FIM FOOTER */
+
+/* RESPONSIVIDADE */
+@media(max-width: 480px){
+    /* home */
+    header{
+        width: 100%;
+    }
+    #logo{
+        display: block;
+        position: relative;
+        margin: 0 auto;
+        left: 0;
+        width: 50px;
+    }
+
+    #navBar{
+        display: none;
+    }
+
+    #title-container{
+        min-width: 100%;
+        margin-top: 20px;
+    }
+
+    #post-container{
+        margin-top: 20px;
+    }
+
+    .post-box{
+        flex: 100% 1 0;
+        padding: 15px;
+        margin: 0;
+    }
+
+    /* POST */
+
+    #post-container{
+        grid-template-columns: 100%;
+        padding: 15px;
+        grid-template-areas: "main"
+        "sidebar";
+
+    }
+
+    .img-container img{
+        width: 100%;
+    }
+}
+/* FIM RESPONSIVIDADE */

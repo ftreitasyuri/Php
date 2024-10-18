@@ -16,6 +16,7 @@ include_once("data/categories.php");
     <link rel="stylesheet" href="<?= $BASE_URL ?>/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="style.css?v=<?php echo time(); ?>">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
     <title>Blog SmartTech</title>
@@ -36,5 +37,6 @@ include_once("data/categories.php");
     </nav>
 </header>
 
-<body>
+<body style="background-color: <?php echo $cor; ?> !important;">
+
     

@@ -1,0 +1,6 @@
+<main id="post-container">
+  <div class="content-container">
+    <h1 id="main-title">Hello World</h1>
+    <p id="post-description"><?= $currentPost['#'] ?></p>
+  </div>
+</main>
