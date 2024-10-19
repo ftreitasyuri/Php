@@ -1,0 +1,69 @@
+.navbar-brand img{
+    width: 50px;
+    /* background-image: blue;*/
+}
+
+#main-title{
+    text-align: center;
+    margin: 15px 0 30px;
+    /* border: 1px solid red; */
+}
+
+#contacts-table{
+    max-width: 1800px;
+    margin: 0 auto;
+    /* border: 1px solid red; */
+
+}
+
+.col-id{
+    font-weight: bold;
+}
+
+.action{
+    text-align: right;
+    width: 150px;
+    border: 1px solid red;
+}
+
+.actions i{
+    font-size: 18px;
+    margin-right: 5px;
+}
+
+#empty-list-text{
+    text-align: center;
+
+}
+
+.check-icon{
+    color: #1E7E34;
+}
+.edit-icon{
+    color: #007BFF;
+}
+.delete-icon{
+    color: #BD2130;
+
+}
+
+.delete-btn{
+    background-color: transparent;
+    border: none;
+    padding: 0;
+}
+
+#msg{
+    color: #155724;
+    background-color: #D4EDDA;
+    border: 1px solid #C3E6CB;
+    padding: 10px;
+    text-align: center;
+    max-width: 500px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+/* body{
+    background-color: aquamarine;
+} */
