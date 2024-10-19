@@ -28,7 +28,7 @@ if(isset($_SESSION['msg'])){
         </a>
         <div class="navbar-nav">
             <a class=" active nav-link" id="home-link" href="<?= $BASE_URL?>/index.php">Agenda</a>
-            <a class=" active nav-link" id="home-link" href="<?= $BASE_URL?>/create.php">Adicionar</a>
+            <a class=" active nav-link" href="<?= $BASE_URL?>/create.php">Adicionar</a>
         </div>
     </nav>
 

@@ -105,3 +105,16 @@
 
 /* FIM STILE EDITAR E ADICIONAR */
 
+/* BOTÃO DELETE */
+.delete-form{
+    display: inline-block;
+}
+/* FIM BOTÃO DELETE */
+
+/* MOBILE */
+@media(max-width: 480px){
+    #home-link{
+        display: none;
+    }
+}
+/* FIM MOBILE */

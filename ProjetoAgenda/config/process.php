@@ -37,6 +37,48 @@ if (!empty($data)) {
         
 
     }
+    elseif($data['type'] === "edit"){
+        $name = $data["name"];
+        $phone = $data["phone"];
+        $obs = $data["observations"];
+        $id = $data["id"];
+
+        $query = "UPDATE contacts 
+                  SET Name = :name, Phone = :phone, Observations = :obs 
+                  WHERE Id = :id";
+
+        $stmt = $conn->prepare($query);
+
+        $stmt->bindParam(":name", $name);
+        $stmt->bindParam(":phone", $phone);
+        $stmt->bindParam(":obs", $obs);
+        $stmt->bindParam(":id", $id);
+        
+        try{
+            $stmt->execute();
+            $_SESSION['msg'] = "Edição Realizada";
+        } catch(PDOException $e){
+            $error = $e->getMessage();
+            echo "Erro: $error";
+        }
+
+    }
+    elseif($data["type"] === "delete"){
+        $id = $data['id'];
+
+        $query = "DELETE FROM contacts WHERE Id = :id";
+
+        $stmt = $conn->prepare($query);
+
+        $stmt->bindParam(":id", $id);
+        try{
+            $stmt->execute();
+            $_SESSION['msg'] = "Contato excluido com sucesso";
+        } catch(PDOException $e){
+            $error = $e->getMessage();
+            echo "Erro: $error";
+        }
+    }
 
 
 // Redirecionando

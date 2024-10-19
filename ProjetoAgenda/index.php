@@ -32,8 +32,15 @@ include_once("templates/header.php")
                         <td scopo="row"><?= $contact['Phone']?></td>
                         <td class="actions">
                             <a href="<?= $BASE_URL?>/show.php?id=<?= $contact["Id"]?>"><i class="fas fa-eye check-icon"></i></a>
-                            <a href="#"><i class="far fa-edit edit-icon"></i></a>
-                            <button class="delete-btn" type="submit"><i class="fas fa-times delete-icon"></i></button>
+                            <a href="<?= $BASE_URL?>/edit.php?id=<?= $contact["Id"]?>"><i class="far fa-edit edit-icon"></i></a>
+                            
+                            <!-- Criando um formulário para enviar o post e poder deletar o registro selecionado -->
+                             <form class="delete-form" action="<?= $BASE_URL?>/config/process.php" method="POST" >
+                                <input type="hidden" name="type" value="delete">
+                                <input type="hidden" name="id" value="<?= $contact['Id']?>">
+                                <button class="delete-btn" type="submit"><i class="fas fa-times delete-icon"></i></button>
+                             </form>
+                            
                         </td>
                         </tr>
                     <?php endforeach;?>
