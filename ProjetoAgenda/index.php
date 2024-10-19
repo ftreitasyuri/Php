@@ -5,6 +5,7 @@ include_once("templates/header.php")
 ?> 
 
 <div class="container">
+    
     <!-- <p id="msg">Testando mensagem</p> -->
         <?php if(isset($printMsg) && $printMsg != ''):?>
             <p id="msg"><?= $printMsg?></p>            
@@ -30,7 +31,7 @@ include_once("templates/header.php")
                         <td scopo="row"><?= $contact['Name']?></td>
                         <td scopo="row"><?= $contact['Phone']?></td>
                         <td class="actions">
-                            <a href="#"><i class="fas fa-eye check-icon"></i></a>
+                            <a href="<?= $BASE_URL?>/show.php?id=<?= $contact["Id"]?>"><i class="fas fa-eye check-icon"></i></a>
                             <a href="#"><i class="far fa-edit edit-icon"></i></a>
                             <button class="delete-btn" type="submit"><i class="fas fa-times delete-icon"></i></button>
                         </td>
